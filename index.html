@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootsrap/bootstrap.css" rel="stylesheet">
+    <script src="js/bootsrap/bootstrap.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="title">
+        <h1 class="text-center">Tableau de calcul HT/TTC</h1>
+    </div>
+    <div class="container-btn text-center mt-4">
+        <input class="btn btn-dark me-2 button-send" type="submit" value="Ajouter une ligne">
+        <input class="btn btn-warning me-2 button-remove" type="submit" value="Supprimer une ligne">
+        <input class="btn btn-danger me-2 button-clearAll" type="submit" value="Effacer les champs">
+        <input class="btn btn-light me-2 button-reset" type="submit" value="RESET">
+    </div>
+</header>
+
+<main>
+    <div id="info-alert"></div>
+    <div class="container-table">
+        <table class="table table-striped" id="table">
+            <thead>
+            <tr>
+                <th scope="col">Libellé</th>
+                <th scope="col">Prix HT</th>
+                <th scope="col">TVA</th>
+                <th scope="col">PRIX TTC</th>
+                <th scope="col">Calculer</th>
+                <th scope="col">Effacer</th>
+                <th scope="col">Supprimer</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr id="first_line">
+                <td>
+                    <div>
+                        <input class="form-control name" maxlength="8" minlength="4" name="name" required size="10" type="text">
+                    </div>
+                </td>
+                <td>
+                    <input class="form-control price-ht" maxlength="8" minlength="4" name="price-ht" required size="10" type="text">
+                </td>
+                <td>
+                    <select class="form-control tva" required>
+                        <option value="1">5.5%</option>
+                        <option value="2">20%</option>
+                    </select>
+                </td>
+                <td>
+                    <input class="form-control price-ttc" maxlength="8" minlength="4" name="price-ttc" placeholder="Prix TTC" required size="10" type="text">
+                </td>
+                <td>
+                    <button class="btn btn-success calculHT" type="button">Calculer</button>
+                </td>
+                <td>
+                    <button class="btn btn-warning clearInput" type="button">Effacer</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger remove" type="button">Supprimer</button>
+                </td>
+            </tr>
+            <tr id="last_line">
+                <td>
+                    <div></div>
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                    <input class="form-control total-price-ttc" maxlength="8" minlength="4" name="total-price-ttc" placeholder="Prix Total TTC" required size="10" type="text">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<div>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
